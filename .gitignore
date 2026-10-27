@@ -5,9 +5,10 @@ __pycache__/
 *.pyd
 
 # Folders
-inference/inference-MN5/scripts/ray-serve/
-inference/inference-MN5/envs/
-inference/inference-MN5/results-*/
+inference/scripts/ray-serve/
+inference/envs/
+inference/results-*/
+inference/results/*
 
 
 # Ignore everything inside inference/results/
@@ -16,17 +17,22 @@ inference/inference-MN5/results/deepspeed/
 #inference/inference-MN5/benchmarks/datasets/
 #inference/inference-MN5/benchmarks/datasets/ShareGPT_V3_unfiltered_cleaned_split.json
 #inference/inference-Leonardo/benchmarks/datasets/ShareGPT_V3_unfiltered_cleaned_split.json
+inference/results/vllm/
+inference/results/deepspeed/
 
 # But do not ignore CSV files directly inside inference/results/
-# !inference/inference-MN5/results/*.csv
+# !inference/results/*.csv
 
-results/deepspeed/*
-results/vllm/*
-results/sglang/*
+inference/results/deepspeed/*
+inference/results/sglang/*
+inference/results/vllm/*
 
-inference/inference-MN5/results/deepspeed/*
-inference/inference-MN5/results/sglang/*
-inference/inference-MN5/results/vllm/*
+training/benchmark-runs*
+training/configs_hydra/benchmarks_to_run/*
+training/datasets/*
+training/models/*
+training/cli-logs/*
+training/.env
 
 inference/inference-MN5/analytics-*/
 inference/inference-MN5/benchmarks-vllm-10122025/*
@@ -56,3 +62,26 @@ inference/inference-LEONARDO/results/deepspeed/
 inference/inference-LEONARDO/results/vllm/
 inference/inference-LEONARDO/results/sglang/
 !inference/inference-LEONARDO/results/*.csv
+*/.torchcompile_cache/*
+*/.torch-inductor-cache/*
+*/.triton*
+*/.cache*
+*copy
+*.deepspeed_env
+*nemo_experiments*
+*.old
+*.sif
+
+
+
+# TEMP
+TRAINING-TODOS*
+.vscode
+training/analytics/results
+training/analytics/results.py
+nemo_top_le*
+nemo_list*
+training/envs
+*copy*
+training/configs_hydra/configs/profiles/tests-enable-compile
+training/configs_hydra/configs/profiles/tests-fp16
